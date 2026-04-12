@@ -1,6 +1,30 @@
-# Dashboard de Vendas - Streamlit
+# 📊 Dashboard de Vendas - Streamlit
 
-Dashboard interativo para análise de vendas criado com Streamlit, Pandas e Plotly.
+Dashboard interativo e moderno para análise completa de dados de vendas, desenvolvido com tecnologias Python de ponta. Visualize insights valiosos sobre performance de vendas, receita e comportamento de clientes através de gráficos dinâmicos e intuitivos.
+
+## ✨ Funcionalidades
+
+- 🗺️ **Mapa Interativo**: Receita por estados brasileiros com visualização geográfica
+- 📈 **Análise Temporal**: Receita mensal com tendências e padrões sazonais
+- 🏆 **Top Performers**: Ranking de estados e categorias por receita
+- 👥 **Análise de Vendedores**: Performance individual (receita e volume de vendas)
+- 📱 **Interface Responsiva**: Design adaptável para diferentes dispositivos
+- 🔄 **Dados em Tempo Real**: Conexão com API para dados atualizados
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Streamlit**: Framework web para aplicações de dados
+- **Pandas**: Manipulação e análise de dados
+- **Plotly**: Gráficos interativos e visualizações avançadas
+- **Python**: Linguagem de programação principal
+
+## 📊 Métricas Disponíveis
+
+- Receita total e por período
+- Distribuição geográfica de vendas
+- Performance por categoria de produto
+- Análise comparativa de vendedores
+- Tendências mensais e sazonais
 
 ## Como executar
 
@@ -27,14 +51,6 @@ pip install streamlit pandas plotly requests
 ```bash
 streamlit run Dashboard.py
 ```
-
-## Funcionalidades
-
-- Análise de receita por estados (mapa interativo)
-- Receita mensal
-- Top estados por receita
-- Receita por categoria de produto
-- Análise de vendedores (receita e quantidade de vendas)
 
 ## Dados
 
