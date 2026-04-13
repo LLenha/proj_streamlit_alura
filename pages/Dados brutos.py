@@ -36,7 +36,12 @@ with st.sidebar.expander('Quantidade de parcelas'):
 query = '''
 Produto in @produtos and \
 @preço[0] <= Preço <= @preço[1] and \
-@data_compra[0] <= `Data da Compra` <= @data_compra[1] 
+@data_compra[0] <= `Data da Compra` <= @data_compra[1] and \
+Vendedor in @vendedores and \
+`Local da compra` in @local_compra and \
+@avaliacao[0]<= `Avaliação da compra` <= @avaliacao[1] and \
+`Tipo de pagamento` in @tipo_pagamento and \
+@qtd_parcelas[0] <= `Quantidade de parcelas` <= @qtd_parcelas[1]
 '''
 dados_filtrados = dados.query(query)
 dados_filtrados = dados_filtrados[colunas]
