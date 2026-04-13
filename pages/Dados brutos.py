@@ -20,6 +20,27 @@ with st.sidebar.expander('Preço do produto'):
     preço = st.slider('Selecione o preço', 0, 5000, (0,5000))
 with st.sidebar.expander('Data da compra'):
     data_compra = st.date_input('Selecione a data da compra', (dados['Data da Compra'].min(), dados['Data da Compra'].max()))
+with st.sidebar.expander('Frete da venda'):
+    frete = st.slider('Frete', 0,250, (0,250))
+with st.sidebar.expander('Vendedor'):
+    vendedores = st.multiselect('Selecione os vendedores', dados['Vendedor'].unique(), dados['Vendedor'].unique())
+with st.sidebar.expander('Local da compra'):
+    local_compra = st.multiselect('Selecione o local da compra', dados['Local da compra'].unique(), dados['Local da compra'].unique())
+with st.sidebar.expander('Avaliação da compra'):
+    avaliacao = st.slider('Selecione a avaliação da compra',1,5, value = (1,5))
+with st.sidebar.expander('Tipo de pagamento'):
+    tipo_pagamento = st.multiselect('Selecione o tipo de pagamento',dados['Tipo de pagamento'].unique(), dados['Tipo de pagamento'].unique())
+with st.sidebar.expander('Quantidade de parcelas'):
+    qtd_parcelas = st.slider('Selecione a quantidade de parcelas', 1, 24, (1,24))
 
+query = '''
+Produto in @produtos and \
+@preço[0] <= Preço <= @preço[1] and \
+@data_compra[0] <= `Data da Compra` <= @data_compra[1] 
+'''
+dados_filtrados = dados.query(query)
+dados_filtrados = dados_filtrados[colunas]
 
-st.dataframe(dados)
+st.dataframe(dados_filtrados)
+
+st.markdown(f'A tabela possui :blue[{dados_filtrados.shape[0]}] linhas e :blue[{dados_filtrados.shape[1]}] colunas.')
