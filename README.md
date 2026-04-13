@@ -1,5 +1,7 @@
 # 📊 Dashboard de Vendas - Streamlit
 
+DISPONÍVEL: https://projappalura-luizalenha.streamlit.app/
+
 Dashboard interativo e completo para análise de dados de vendas, desenvolvido com tecnologias Python modernas. Criado a partir do curso 'Streamlit: construindo um dashboard interativo' oferecido pela Alura.
 
 ## ✨ Funcionalidades Principais
